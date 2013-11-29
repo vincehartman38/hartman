@@ -19,6 +19,9 @@
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
 </head>
 <body class="{{body_class}}">
 
@@ -29,16 +32,8 @@
         <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
         <div class="inner">
              <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2013 &bull; All rights reserved.</section>
-             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
         </div>
     </footer>
-
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
-
-    {{! The main JavaScript file for Hartman }}
-    <script type="text/javascript" src="/assets/js/index.js"></script>
-    <script type="text/javascript" src="/assets/js/disqus.js"></script>
 
 </body>
 </html>

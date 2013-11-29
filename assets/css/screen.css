@@ -42,7 +42,7 @@
 }
 
 /* Apply these base styles to all icons */
-.icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
+.icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook, .icon-linkedin, .icon-gmail {
     font-family: 'icons';
     speak: none;
     font-style: normal;
@@ -56,21 +56,28 @@
 
 /* Each icon is created by inserting the corret character into the 
    content of the :before pseudo element. Like a boss. */
-.icon-ghost:before {
-    content: "\e000";
-}
 .icon-feed:before {
-    content: "\e001";
+    content: "\e800";
 }
 .icon-twitter:before {
-    content: "\e002";
+    content: "\e803";
     font-size: 1.1em;
 }
 .icon-google-plus:before {
-    content: "\e003";
+    content: "\e801";
+    font-size: 1.2em;
+}
+.icon-linkedin:before {
+    content: "\e804";
 }
 .icon-facebook:before {
-    content: "\e004";
+    content: "\e805";
+}
+.icon-github:before {
+    content: "\e807";
+}
+.icon-gmail:before {
+    content: "\e806";
 }
 
 
@@ -362,7 +369,6 @@ table.plain {
     display: table;
     width: 100%;
     height: 50%;
-    margin-bottom: 5rem;
     text-align: center;
     color: #fff;
     background: #303538 no-repeat center center;
@@ -375,6 +381,40 @@ table.plain {
     padding: 15px;
 }
 
+/* header link bar */
+#link-head{
+    background-color: #303030;
+    height: 60px;
+    margin-bottom: 5rem;
+    width:100%;
+}
+#link-content{
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top:5px;
+    vertical-align: middle;
+}
+#link-content a{
+    margin-right: 100px;
+    text-decoration: none;
+}
+#link-content a:last-child{
+    margin-right: 0;
+}
+ #link-content  .icon-facebook, #link-content  .icon-linkedin, #link-content  .icon-gmail{
+    color: #f2f2f2;
+    font-size: 2em;
+    padding-top: 5px;
+}
+#link-content .icon-twitter{
+    color: #f2f2f2;
+    font-size: 1.8em;
+    padding-top: 5px;
+}
+#link-content .icon-twitter:before, #link-content .icon-facebook:before, #link-content .icon-linkedin:before, #link-content .icon-gmail:before{
+    vertical-align: top;
+}
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
 #blog-logo img {
     border: white solid 3px;
@@ -414,7 +454,7 @@ table.plain {
     font-family: 'Droid Serif', serif;
     letter-spacing: 0;
 }
-.blog-description a, a:hover{
+.blog-description a, .blog-description a:hover{
     color: #28A1CA;
     font-weight: 700;
     text-decoration: none;
@@ -707,19 +747,6 @@ table.plain {
     color: #50585D;
 }
 
-.poweredby .icon-ghost {
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.poweredby .icon-ghost:hover {
-    text-decoration: none;
-}
-
-.poweredby .icon-ghost:before {
-    font-size: 1rem;
-    margin-right: 0.2em;
-}
 
 /* The subscribe icon on the footer */
 .subscribe {
